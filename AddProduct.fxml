@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="lblAddProId" prefHeight="560.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="C482PA.Controllers.AddProduct">
+   <children>
+      <TableView fx:id="tvAddProductAdd" layoutX="372.0" layoutY="78.0" prefHeight="178.0" prefWidth="380.0">
+        <columns>
+          <TableColumn fx:id="tvAddProId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tvAddProName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="tvAddProInv" prefWidth="115.0" text="Inventory" />
+            <TableColumn fx:id="tvAddProPrice" prefWidth="114.0" text="Price" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tvAddProductDelete" layoutX="372.0" layoutY="296.0" prefHeight="178.0" prefWidth="380.0">
+        <columns>
+          <TableColumn fx:id="tvDelId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tvDelName" prefWidth="81.0" text="Name" />
+            <TableColumn fx:id="tvDelInv" prefWidth="122.0" text="Inventory" />
+            <TableColumn fx:id="tvDelPrice" prefWidth="101.0" text="Price" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtAddSearch" layoutX="603.0" layoutY="37.0" onAction="#handleSearch" promptText="Search by Part ID or Name" />
+      <Label fx:id="lblAddPro" layoutX="28.0" layoutY="32.0" text="Add Product">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAddPro" layoutX="693.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleAdd" text="Add">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelPro" layoutX="603.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="149.0" text="Remove Associated Part" />
+      <Button fx:id="btnCancel" layoutX="700.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleAddProCancel" text="Cancel" />
+      <Button fx:id="btnSave" layoutX="603.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleAddProSave" text="Save" />
+      <Label fx:id="lblProId" layoutX="72.0" layoutY="138.0" text="ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddProId" disable="true" layoutX="116.0" layoutY="137.0" prefHeight="27.0" prefWidth="162.0" promptText="Auto-Gen Disabled" />
+      <Label fx:id="lblAddProName" layoutX="57.0" layoutY="190.0" text="Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddProName" layoutX="116.0" layoutY="191.0" prefHeight="25.0" prefWidth="162.0" />
+      <Label fx:id="lblAddProInv" layoutX="71.0" layoutY="297.0" text="Inv">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddProInv" layoutX="116.0" layoutY="298.0" prefHeight="25.0" prefWidth="162.0" />
+      <Label fx:id="lblAddProPrice" layoutX="63.0" layoutY="243.0" text="Price">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddProPrice" layoutX="116.0" layoutY="246.0" prefHeight="25.0" prefWidth="162.0" />
+      <Label fx:id="lblAddProMax" layoutX="65.0" layoutY="345.0" text="Max">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddProMax" layoutX="116.0" layoutY="347.0" prefHeight="25.0" prefWidth="79.0" />
+      <Label fx:id="lblAddProMin" layoutX="215.0" layoutY="346.0" text="Min">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAddProMin" layoutX="260.0" layoutY="347.0" prefHeight="25.0" prefWidth="79.0" />
+   </children>
+</AnchorPane>
